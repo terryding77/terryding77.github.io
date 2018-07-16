@@ -89,9 +89,6 @@ sitemap:
 #search
 search:
   path: search.xml
-  field: all
-
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'coy'
-  line_number: false # default false
+  field: post
+  format: html
+  limit: 10000

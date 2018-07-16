@@ -60,7 +60,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2017
 
   # Icon between year and copyright info.
   icon:
@@ -88,7 +88,8 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
+  custom_text: '<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a> and <a href="https://pages.github.com" style="font-weight: bold">Github Pages</a></p>'
+
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -154,7 +155,17 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
+social:
+    GitHub: https://github.com/terryding77 || github
+    E-Mail: mailto:terryding77@gmail.com || envelope
+    Twitter: https://twitter.com/TerryDing77 || twitter
+    Instagram: https://www.instagram.com/terryding77/ || instagram
+    #微博: http://weibo.com/2585634694/profile || weibo
+    #linkedin: "http://www.linkedin.com/in/terry-ding-982308111/"
+    知乎: https://www.zhihu.com/people/terryding77/ || globe
+    哔哩哔哩: http://space.bilibili.com/636878/ || tv
+    Telegram: https://t.me/terryding77 || telegram
+
   #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
@@ -268,7 +279,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -298,7 +309,7 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
     show_result: false
 
@@ -362,7 +373,7 @@ custom_logo:
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 # Enable "cheers" for archive page.
 cheers_enabled: true
@@ -430,7 +441,7 @@ font:
 
 # Math Equations Render Support
 math:
-  enable: false
+  enable: true
 
   # Default(true) will load mathjax/katex script on demand
   # That is it only render those page who has 'mathjax: true' in Front Matter.
@@ -474,7 +485,7 @@ pangu: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 0a637d79a9016eda3b1d14fdecc3c9b3
 
 # Disqus
 disqus:
@@ -576,10 +587,10 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: hqz4Vi-H0PC5A5SFZl30oJTrVCknLq7nueGQEdNI01g
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-93912232-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -709,7 +720,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
