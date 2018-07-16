@@ -1,0 +1,11 @@
+# robots.txt of terryding's blog
+User-agent: *
+
+Allow: /
+
+
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /js/
+
+Sitemap: http://blog.dingtianyu.xyz/sitemap.xml
