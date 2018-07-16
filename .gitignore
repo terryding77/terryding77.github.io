@@ -5,3 +5,5 @@ db.json
 node_modules/
 public/
 .deploy*/
+.encrypted_secret_key
+

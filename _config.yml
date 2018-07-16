@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Terry Ding's Blog
 subtitle:
 description:
-author: John Doe
-language:
+author: Terry Ding
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.dingtianyu.xyz
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -25,7 +25,9 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+  - baidu_verify_gDyYuer5Ci.html
+  - googlefdb8260ac3e08dd2.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -34,11 +36,11 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -63,9 +65,33 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+
+#feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
+  content:
+
+#sitemap
+sitemap:
+    path: sitemap.xml
+    template: 
+
+#search
+search:
+  path: search.xml
+  field: all
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'coy'
+  line_number: false # default false

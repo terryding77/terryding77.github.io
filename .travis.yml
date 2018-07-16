@@ -1,26 +1,26 @@
 language: node_js
-node_js: stable
+node_js: lts/*
 
-# S: Build Lifecycle
 install:
   - npm install
 
-
-#before_script:
- # - npm install -g gulp
+before_install:
+  - npm install -g hexo
 
 script:
+  - cp next_theme_config.yml  themes/hexo-theme-next/_config.yml
   - hexo g
 
 after_script:
-  - cd ./public
-  - git init
-  - git config user.name "terryding77"
-  - git config user.email "terryding77@gmail.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
+  - >
+    cd ./public &&
+    git init &&
+    git config user.name "terryding77" &&
+    git config user.email "terryding77@gmail.com" &&
+    git add . &&
+    git commit -m "Update docs"
+  - git push --force "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+  - git push --force "https://terryding77:${CODING_TOKEN}@${CODING_REF}" master:master
 
 branches:
   only:
@@ -29,3 +29,4 @@ branches:
 env:
  global:
    - GH_REF: github.com/terryding77/terryding77.github.io.git
+   - CODING_REF: git.coding.net/terryding77/terryding77.coding.me
