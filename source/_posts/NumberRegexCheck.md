@@ -1,8 +1,11 @@
 ---
 title: 正则匹配一个数字(python实现)
 date: 2017-04-15 07:09:02
-tags: [python, 正则]
-categories: [python, 正则]
+tags: 
+    - python
+    - 正则
+categories:
+    - [算法]
 ---
 ## 问题描述
 给定一组字符串，判断该字符串是否为一个合法的数字，要求如下

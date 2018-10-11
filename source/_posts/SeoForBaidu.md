@@ -1,7 +1,15 @@
 ---
 title: 使用gitlab的pages功能让百度收录github博客
 date: 2017-04-18 11:22:04
-tags: [seo, baidu, gitlab, dns, travis-ci]
+tags: 
+    - seo
+    - baidu
+    - gitlab
+    - dns
+    - travis-ci
+categories:
+    - [SEO]
+
 ---
 今天给博客添加了baidu和google的校验文件，希望能让搜索引擎快速的收录博客的变更，但是操作中发现baidu的爬虫没办法爬去博客的sitemap
 

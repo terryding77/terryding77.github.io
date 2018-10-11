@@ -1,7 +1,13 @@
 ---
 title: Oracle数据库Sql的With As语句
 date: 2017-04-18 02:23:56
-tags: [Oracle, sql, docker]
+tags:
+    - Oracle
+    - sql
+    - docker
+categories:
+    - [数据库]
+
 ---
 # 问题描述
 今天碰到一道sql的题目，问题简化下来就是一张存有id和订单号的表格orders，筛选出拥有最多订单的所有id。

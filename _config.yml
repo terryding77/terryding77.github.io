@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Terry Ding's Blog
+title: 贤哥乱谈
 subtitle:
 description:
 author: Terry Ding
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -46,7 +46,7 @@ highlight:
   tab_replace: false
 
 # Category & Tag
-default_category: uncategorized
+default_category: 未分类
 category_map:
 tag_map:
 

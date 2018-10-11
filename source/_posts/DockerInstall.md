@@ -1,7 +1,10 @@
 ---
 title: ubuntu 17.04下安装docker国内镜像教程
 date: 2017-04-18 01:06:23
-tags: [docker]
+tags:
+    - docker
+categories:
+    - [运维]
 ---
 前几天看到新闻说ubuntu以后要回归默认gnome，于是就在虚拟机下安装了新版的ubuntu-gnome17.04。顺手就总结下在纯净的ubuntu下安装docker的过程。
 
