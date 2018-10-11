@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: 
+skip_render:
   - baidu_verify_gDyYuer5Ci.html
   - googlefdb8260ac3e08dd2.html
 
@@ -40,10 +40,10 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: true
+  tab_replace: false
 
 # Category & Tag
 default_category: uncategorized
@@ -84,7 +84,7 @@ feed:
 #sitemap
 sitemap:
     path: sitemap.xml
-    template: 
+    template:
 
 #search
 search:

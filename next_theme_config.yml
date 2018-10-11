@@ -137,9 +137,9 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-#scheme: Mist
-#scheme: Pisces
+# scheme: Muse
+# scheme: Mist
+# scheme: Pisces
 scheme: Gemini
 
 
@@ -554,7 +554,6 @@ gitment:
 # Warning: JiaThis does not support https.
 #jiathis:
   ##uid: Get this uid from http://www.jiathis.com/
-
 #add_this_id:
 
 # NeedMoreShare2
@@ -599,6 +598,10 @@ google_analytics: UA-93912232-1
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
 #yandex_site_verification:
+
+# Baidu Webmaster tools verification setting
+# See: https://ziyuan.baidu.com/site/
+#baidu_site_verification:
 
 # CNZZ count
 #cnzz_siteid:

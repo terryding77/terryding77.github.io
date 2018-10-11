@@ -15,7 +15,7 @@ tags:
 
 **解压并安装依赖**
 
-```shell
+```bash
 sudo yum -y install epel-release
 sudo yum install -y zsh gcc python34 ncurses-devel wget unzip lua-devel python-devel perl-devel ruby-devel python34-pip python34-devel cscope words tmux git
 tar zxvf dot.tar.gz
