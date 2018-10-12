@@ -29,4 +29,4 @@ branches:
 env:
  global:
    - GH_REF: github.com/terryding77/terryding77.github.io.git
-   - CODING_REF: git.coding.net/terryding77/terryding77.coding.me
+   - CODING_REF: git.dev.tencent.com/terryding77/terryding77.coding.me
