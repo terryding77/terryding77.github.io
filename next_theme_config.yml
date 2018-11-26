@@ -311,7 +311,7 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
-  awl: 4
+  awl: 2
   wpm: 275
 
 codeblock:
@@ -478,7 +478,7 @@ math:
 # PDF Support
 # Dependencies: https://github.com/theme-next/theme-next-pdf
 pdf:
-  enable: false
+  enable: true
 
   # Default(true) will load PDFObject/PDF.js script on demand
   # That is it only render those page who has 'pdf: true' in Front Matter.
@@ -495,12 +495,12 @@ pdf:
 
 # Han Support
 # Dependencies: https://github.com/theme-next/theme-next-han
-han: false
+han: true
 
 # Pangu Support
 # Dependencies: https://github.com/theme-next/theme-next-pangu
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -564,8 +564,8 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-baidushare:
-  type: slide
+# baidushare:
+#   type: slide
 
 # addthis Share, see: https://www.addthis.com
 #add_this_id:
@@ -582,21 +582,21 @@ baidushare:
 #           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
-      position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      position: bottom
+      networks: Weibo,Wechat,Douban,Twitter,Linkedin,Mailto,Facebook,Evernote
   float:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,Twitter,Linkedin,Mailto,Facebook,Evernote
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters
@@ -750,7 +750,7 @@ local_search:
 # Bookmark Support
 # Dependencies: https://github.com/theme-next/theme-next-bookmark
 bookmark:
-  enable: false
+  enable: true
   # if auto
   #   - save the reading position when closing the page
   #   - or clicking the bookmark-icon

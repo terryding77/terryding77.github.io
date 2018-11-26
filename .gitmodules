@@ -1,3 +1,18 @@
 [submodule "themes/hexo-theme-next"]
 	path = themes/hexo-theme-next
 	url = https://github.com/theme-next/hexo-theme-next
+[submodule "themes_plugins/needsharebutton"]
+	path = themes_plugins/needsharebutton
+	url = https://github.com/theme-next/theme-next-needmoreshare2
+[submodule "themes_plugins/bookmark"]
+	path = themes_plugins/bookmark
+	url = https://github.com/theme-next/theme-next-bookmark.git
+[submodule "themes_plugins/pdf"]
+	path = themes_plugins/pdf
+	url = https://github.com/theme-next/theme-next-pdf
+[submodule "themes_plugins/han"]
+	path = themes_plugins/han
+	url = https://github.com/theme-next/theme-next-han
+[submodule "themes_plugins/pangu"]
+	path = themes_plugins/pangu
+	url = https://github.com/theme-next/theme-next-pangu.git
