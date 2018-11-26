@@ -10,7 +10,7 @@ before_install:
 
 script:
   - cp next_theme_config.yml  themes/hexo-theme-next/_config.yml
-  - ln -s `pwd`/themes_plugins/* themes/hexo-theme-next/source/lib/
+  - ln -sfv `pwd`/themes_plugins/* themes/hexo-theme-next/source/lib/
   - hexo g
 
 after_script:
@@ -29,6 +29,6 @@ branches:
     - blog-source
 
 env:
- global:
-   - GH_REF: github.com/terryding77/terryding77.github.io.git
-   - CODING_REF: git.dev.tencent.com/terryding77/terryding77.coding.me
+  global:
+    - GH_REF: github.com/terryding77/terryding77.github.io.git
+    - CODING_REF: git.dev.tencent.com/terryding77/terryding77.coding.me

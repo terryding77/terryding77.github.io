@@ -10,9 +10,9 @@
 [submodule "themes_plugins/pdf"]
 	path = themes_plugins/pdf
 	url = https://github.com/theme-next/theme-next-pdf
-[submodule "themes_plugins/han"]
-	path = themes_plugins/han
-	url = https://github.com/theme-next/theme-next-han
 [submodule "themes_plugins/pangu"]
 	path = themes_plugins/pangu
 	url = https://github.com/theme-next/theme-next-pangu.git
+[submodule "themes_plugins/Han"]
+	path = themes_plugins/Han
+	url = https://github.com/theme-next/theme-next-han
