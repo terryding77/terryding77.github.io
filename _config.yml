@@ -4,15 +4,15 @@
 
 # Site
 title: 贤哥乱谈
-subtitle: 随意胡侃的大本营
-description:
+subtitle: 随意胡侃，享受生活
+description: 一个没有描述的描述。
 author: Terry Ding
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.dingtianyu.xyz
+url: http://blog.terryding.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
