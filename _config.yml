@@ -4,7 +4,7 @@
 
 # Site
 title: 贤哥乱谈
-subtitle:
+subtitle: 随意胡侃的大本营
 description:
 author: Terry Ding
 language: zh-CN
@@ -26,8 +26,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - baidu_verify_gDyYuer5Ci.html
-  - googlefdb8260ac3e08dd2.html
+  #  - googlefdb8260ac3e08dd2.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -72,7 +71,6 @@ theme: hexo-theme-next
 deploy:
   type:
 
-
 #feed
 feed:
   type: atom
@@ -83,8 +81,8 @@ feed:
 
 #sitemap
 sitemap:
-    path: sitemap.xml
-    template:
+  path: sitemap.xml
+  template:
 
 #search
 search:
@@ -100,13 +98,13 @@ html_minifier:
   ignore_error: false
   silent: false
   exclude:
-    - 'index.md'
+    - "index.md"
 
 css_minifier:
   enable: true
   silent: false
   exclude:
-    - '*.min.css'
+    - "*.min.css"
 
 js_minifier:
   enable: true
@@ -115,7 +113,7 @@ js_minifier:
   output:
   compress:
   exclude:
-    - '*.min.js'
+    - "*.min.js"
 
 image_minifier:
   enable: true
