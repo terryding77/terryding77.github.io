@@ -81,8 +81,10 @@ feed:
 
 #sitemap
 sitemap:
-  path: sitemap.xml
-  template:
+  path: sitemap.xml
+
+baidusitemap:
+path: baidusitemap.xml
 
 #search
 search:

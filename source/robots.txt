@@ -2,10 +2,17 @@
 User-agent: *
 
 Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /about/
 
 
+Disallow: /vendors/
+Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
-Disallow: /js/
+Disallow: /vendors/
+Disallow: /fancybox/
 
-Sitemap: http://blog.dingtianyu.xyz/sitemap.xml
+Sitemap: https://blog.terryding.com/sitemap.xml
+Sitemap: https://blog.terryding.com/baidusitemap.xml
