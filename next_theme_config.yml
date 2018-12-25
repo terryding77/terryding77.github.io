@@ -48,10 +48,6 @@ favicon:
   medium: /images/logo.png
   apple_touch_icon: /images/logo.png
   safari_pinned_tab: /images/logo.png
-  # small: /images/favicon-16x16-next.png
-  # medium: /images/favicon-32x32-next.png
-  # apple_touch_icon: /images/apple-touch-icon-next.png
-  # safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -136,6 +132,7 @@ exturl: false
 # Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+# External url should start with http:// or https:// .
 menu:
   首页: / || home
   个人简介: /about/ || user
@@ -357,12 +354,15 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: false
-  url: https://github.com/theme-next/theme-next.org/_posts/tree/master/ # Link for view source.
-# url: https://github.com/theme-next/theme-next.org/_posts/edit/master/ # Link for fork & edit.
+  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source.
+  #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit.
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
+
+# Disable Baidu tranformation on mobile devices.
+disable_baidu_tranformation: false
 
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: true
@@ -371,7 +371,7 @@ mobile_layout_economy: true
 android_chrome_color: "#222"
 
 # Custom Logo.
-# !!Only available for Default Scheme currently.
+# Do not support Scheme Mist currently.
 # Options:
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
@@ -571,6 +571,7 @@ gitalk:
   client_secret: # Github Application Client Secret
   admin_user: # GitHub repo owner and collaborators, only these guys can initialize github issues
   distraction_free_mode: true # Facebook-like distraction free mode
+
 # Baidu Share
 # Available value:
 #    button | slide
@@ -846,19 +847,9 @@ lazyload: false
 # Dependencies: https://github.com/theme-next/theme-next-pace
 pace: false
 # Themes list:
-#pace-theme-big-counter
-#pace-theme-bounce
-#pace-theme-barber-shop
-#pace-theme-center-atom
-#pace-theme-center-circle
-#pace-theme-center-radar
-#pace-theme-center-simple
-#pace-theme-corner-indicator
-#pace-theme-fill-left
-#pace-theme-flash
-#pace-theme-loading-bar
-#pace-theme-mac-osx
-#pace-theme-minimal
+# pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
+# pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
+# pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
 pace_theme: pace-theme-minimal
@@ -1006,7 +997,7 @@ vendors:
 
   # Internal version: 3.3.0
   # See: https://github.com/ethantw/Han
-  Han:
+  han:
 
   # Internal version: 3.3.0
   # See: https://github.com/vinta/pangu.js
@@ -1044,14 +1035,14 @@ vendors:
 
   # Internal version: 1.4.0
   # See: https://github.com/gitalk/gitalk
-  # Examples:
+  # Example:
   # gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js
   # gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.css
   gitalk_js:
   gitalk_css:
 
   # Internal version: 0.7.3
-  # See: https://github.com/emn178/js-md5/
+  # See: https://github.com/emn178/js-md5
   # Example:
   # md5: https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js
   md5:
