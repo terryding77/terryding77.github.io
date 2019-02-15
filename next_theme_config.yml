@@ -82,7 +82,7 @@ footer:
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: true
   # -------------------------------------------------------------
@@ -102,7 +102,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: false
-  post: false
+  post: true
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -853,7 +853,7 @@ pace: true
 # pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-mac-osx
 
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
