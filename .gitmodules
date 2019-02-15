@@ -16,3 +16,6 @@
 [submodule "themes_plugins/Han"]
 	path = themes_plugins/Han
 	url = https://github.com/theme-next/theme-next-han
+[submodule "themes_plugins/pace"]
+	path = themes_plugins/pace
+	url = https://github.com/theme-next/theme-next-pace
