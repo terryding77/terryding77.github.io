@@ -46,7 +46,7 @@ from (select id, count(orderNumber) as counts
 where t1.counts = t2.max_counts;
 ```
 
-![mysql-screenshot](mysql-screenshot.png)
+![mysql-screenshot](https://wx4.sinaimg.cn/large/9a1da786gy1g06xhybd5lj20wf0qdmzn.jpg)
 
 其中t1表完成id对应拥有订单总数的表格，t2是t1中最大的订单数量，但写法上可以发现t1和t2的构造有很大一部分是冗余的，但我一时也无法找到合适的写法去除这个冗余。
 
@@ -55,11 +55,11 @@ where t1.counts = t2.max_counts;
 # Oracle数据库安装
 简单的搜索了Oracle数据的的安装教程，感觉好像很麻烦，而我又是只想简单使用，想着应该可以用docker来安装。
 
-![docker-search-oracal](docker-search-oracal.png)
+![docker-search-oracal](https://wx3.sinaimg.cn/large/9a1da786gy1g06xhyfo0rj211x0i30xi.jpg)
 
 看到了排名第一的Oracle镜像，转战github查看下[源码仓库](https://github.com/wnameless/docker-oracle-xe-11g)，其中包含了dockerfile和使用指南等，对我来说，如何运行docker镜像以及登录Oracle命令行是我想知道的，稍微阅读下使用指南，知道了镜像对应的端口以及Oracle数据库的默认用户名密码，开始运行镜像并登录：
 
-![docker-oracle-11g-usage](docker-oracle-11g-usage.png)
+![docker-oracle-11g-usage](https://ws1.sinaimg.cn/large/9a1da786gy1g06xhyl2f4j20r00s8dke.jpg)
 
 # Oracle数据库with as写法
 with as的写法大致为`with 别名 as (表的定义)`这样的形式，其中表的定义可以使用select语句或者其他能产生表的方法。
@@ -72,7 +72,7 @@ select t1.id
     where t1.counts = t2.max_counts;
 ```
 
-![oracle-screenshot](oracle-screenshot.png)
+![oracle-screenshot](https://ws4.sinaimg.cn/large/9a1da786gy1g06xhy7ewxj20rs0n7jt6.jpg)
 
 with as的写法可以并列多条，后面的可以使用前面已经定义好的表，如t2的定义就使用了t1表。
 

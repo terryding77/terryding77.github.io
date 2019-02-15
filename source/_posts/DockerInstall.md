@@ -33,7 +33,7 @@ sudo systemctl restart docker
 ## 测试docker命令
 我们可以使用`sudo docker run hello-world`来测试下docker的安装情况，若一切正常，会显示
 
-![hello_world](docker-hello-world.png)
+![hello_world](https://wx3.sinaimg.cn/large/9a1da786gy1g06xjhhwztj20td0f8dhv.jpg)
 
 这时docker的安装就完成了，但如果你是一个像我一样的懒虫，这些可能还不够， 你发现在使用docker的时候需要不断的输入sudo，并提供密码之类的， 那是否有办法可以不输入sudo，以当前用户来完成docker的操作呢?
 
@@ -41,7 +41,7 @@ sudo systemctl restart docker
 ## 免sudo运行docker命令
 经过一番搜索，我们发现了其实运行docker指令就是和docker的进程进行通信， 而通信过程中使用的是socket文件，查看该socket文件，我们发现该socket文件的权限有点特别:
 
-![docker-socket](docker-socket.png)
+![docker-socket](https://wx2.sinaimg.cn/large/9a1da786gy1g06xjhc5vsj20l002174l.jpg)
 
 它是属于**root用户**和**docker组**的，这个docker组是什么呢?
 查找了下文档，我们发现[docker官方文档](https://docs.docker.com/engine/installation/linux/linux-postinstall/)里就有这样一段话，并解决了我们的问题：
