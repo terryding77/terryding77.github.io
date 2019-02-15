@@ -331,8 +331,8 @@ codeblock:
 reward:
   enable: true
   comment: 一瓶肥仔快乐水
-  #wechatpay: /images/wechatpay.jpg
-  alipay: /alipay.jpg
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
