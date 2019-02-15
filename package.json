@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "hexo": "^3.8.0",
-    "hexo-all-minifier": "^0.5.2",
+    "hexo-abbrlink": "^2.0.5",
+    "hexo-all-minifier": "^0.5.3",
     "hexo-asset-image": "0.0.3",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-baidu-sitemap": "^0.1.5",
