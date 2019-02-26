@@ -19,3 +19,6 @@
 [submodule "themes_plugins/pace"]
 	path = themes_plugins/pace
 	url = https://github.com/theme-next/theme-next-pace
+[submodule "themes_plugins/reading_progress"]
+	path = themes_plugins/reading_progress
+	url = https://github.com/theme-next/theme-next-reading-progress
