@@ -7,7 +7,7 @@ tags:
   - dns
   - travis-ci
 categories:
-  - - SEO
+  - [SEO]
 abbrlink: 5b944fdc
 date: 2017-04-18 11:22:04
 ---

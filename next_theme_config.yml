@@ -108,6 +108,12 @@ creative_commons:
   post: false
   language: deed.zh
 
+# Follow me on GitHub banner in right-top corner.
+github_banner:
+  enable: true
+  permalink: https://github.com/terryding77
+  title: 关注我的GitHub
+
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
@@ -202,12 +208,6 @@ social_icons:
   icons_only: false
   transition: false
 
-# Follow me on GitHub banner in right-top corner.
-# Usage: `permalink || title`
-# Value before `||` delimeter is the target permalink.
-# Value after `||` delimeter is the title and aria-label name.
-github_banner: https://github.com/terryding77 || 关注我的Github
-
 # Blog rolls
 links_icon: link
 links_title: Links
@@ -296,8 +296,8 @@ post_meta:
   created_at: true
   updated_at:
     enabled: false
-    # If true, show updated date label only if `updated date` different from `created date` (post edited in another day than was created).
-    # And if post will edited in same day as created, edited time will show in popup title under created time label.
+    # If true, show updated date label only if `updated date` is different from `created date` (post edited in another day than was created).
+    # And if post was edited in same day as created, edited time will show in popup title under created time label.
     # If false show anyway, but if post edited in same day, show only edited time.
     another_day: true
   categories: true
@@ -320,10 +320,12 @@ codeblock:
     enable: true
     # Show text copy result
     show_result: true
+    # Style: only 'flat' is currently available, leave it blank if you prefer default theme
+    style:
 
 # Wechat Subscriber
 wechat_subscriber:
-  #enabled: true
+  enable: false
   #qcode: /path/to/your/wechatqcode e.g. /uploads/wechat-qcode.jpg
   #description: e.g. subscribe to my blog by scanning my public wechat account
 
@@ -372,12 +374,9 @@ android_chrome_color: "#222"
 
 # Custom Logo
 # Do not support Scheme Mist currently.
-# Options:
-#   enabled: If true, will enable custom logo
-#   image: Images's url, e.g. /uploads/custom-logo.jpg
 custom_logo:
-  enabled: false
-  image:
+  enable: false
+  image: #/uploads/custom-logo.jpg
 
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
@@ -385,7 +384,21 @@ custom_logo:
 highlight_theme: night eighties
 
 # Enable "cheers" for archive page.
-cheers_enabled: false
+cheers: false
+
+# ---------------------------------------------------------------
+# Tagcloud Settings
+# ---------------------------------------------------------------
+
+tagcloud:
+  # If true, font size and color can be customized
+  enable: true
+
+  # All values below are same as default, change them by yourself
+  min: 18 # min font size in px
+  max: 48 # max font size in px
+  start: "#333333" # start color (hex, rgba, hsla or color keywords)
+  end: "#111" # end color (hex, rgba, hsla or color keywords)
 
 # ---------------------------------------------------------------
 # Font Settings. Introduced in NexT v5.0.1.
@@ -511,14 +524,30 @@ pangu: true
 # Visit https://github.com/GoogleChromeLabs/quicklink for details
 quicklink:
   enable: true
-  timeout: 3000 # Custom a timeout (milliseconds) for prefetching resources
-  priority: true # Set true to enable fetch() or falls back to XHR
+
+  # Quicklink (quicklink.umd.js script) is loaded on demand
+  # Add `quicklink: true` in Front Matter of the page or post you need
+  # Home page and archive page can be controlled through home and archive options below
+  home: true
+  archive: true
+
+  # Default (true) will initialize quicklink after the load event fires
+  delay: true
+
+  # Custom a time in milliseconds by which the browser must execute prefetching
+  timeout: 3000
+
+  # Default (true) will enable fetch() or falls back to XHR
+  priority: true
+
   # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores
   # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
   # Leave ignores as empty if you don't understand what it means
   # Example:
-  # ignores: uri => uri.includes('.xml'), (uri, elem) => elem.hasAttribute('noprefetch')
-  # ignores: [/\/api\/?/, uri => uri.includes('123.html')]
+  # ignores:
+  #   - /\/api\/?/
+  #   - uri => uri.includes('.xml')
+  #   - (uri, el) => el.hasAttribute('noopener')
   ignores:
 
 # Swiftype Search API Key
@@ -586,11 +615,15 @@ gitment:
 gitalk:
   enable: false
   github_id: # Github repo owner
-  repo: # Repository name to store issues.
+  repo: # Repository name to store issues
   client_id: # Github Application Client ID
   client_secret: # Github Application Client Secret
   admin_user: # GitHub repo owner and collaborators, only these guys can initialize github issues
   distraction_free_mode: true # Facebook-like distraction free mode
+  # Gitalk's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available value: en, es-ES, fr, ru, zh-CN, zh-TW
+  language:
 
 # Baidu Share
 # Available values: button | slide
@@ -1019,7 +1052,6 @@ vendors:
   # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js
   pangu:
 
-  # Internal version: 1.0.0
   # See: https://github.com/GoogleChromeLabs/quicklink
   # Example:
   # quicklink: //cdn.jsdelivr.net/npm/quicklink@1.0.0/dist/quicklink.umd.js
