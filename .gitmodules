@@ -22,3 +22,6 @@
 [submodule "themes_plugins/reading_progress"]
 	path = themes_plugins/reading_progress
 	url = https://github.com/theme-next/theme-next-reading-progress
+[submodule "themes_plugins/quicklink"]
+	path = themes_plugins/quicklink
+	url = https://github.com/theme-next/theme-next-quicklink.git
