@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>贤哥乱谈</title>
+  
+  <subtitle>随意胡侃，享受生活</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.terryding.com/"/>
+  <updated>2019-05-30T06:58:55.542Z</updated>
+  <id>http://blog.terryding.com/</id>
+  
+  <author>
+    <name>Terry Ding</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go modules 模块解析</title>
+    <link href="http://blog.terryding.com/p/9c8bdfe5.html"/>
+    <id>http://blog.terryding.com/p/9c8bdfe5.html</id>
+    <published>2019-05-07T08:20:13.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;&lt;p&gt;原文：&lt;a href=&quot;https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Anatomy of Modules
+      
+    
+    </summary>
+    
+      <category term="Golang" scheme="http://blog.terryding.com/categories/Golang/"/>
+    
+      <category term="Modules" scheme="http://blog.terryding.com/categories/Golang/Modules/"/>
+    
+      <category term="翻译" scheme="http://blog.terryding.com/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="Golang" scheme="http://blog.terryding.com/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派安装ubuntu18.04的aarch64架构版本</title>
+    <link href="http://blog.terryding.com/p/8c1bf925.html"/>
+    <id>http://blog.terryding.com/p/8c1bf925.html</id>
+    <published>2019-02-26T10:11:38.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近收拾东西，发现了桌子上落灰的树莓派，思考了下，准备把它拿来做项目的测试系统之一&lt;/p&gt;&lt;p&gt;把官方的系统&lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot; target=&quot;_blank&quot; rel=&quot;noop
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.terryding.com/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="ubuntu" scheme="http://blog.terryding.com/tags/ubuntu/"/>
+    
+      <category term="树莓派" scheme="http://blog.terryding.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+      <category term="arm64" scheme="http://blog.terryding.com/tags/arm64/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用docker配置安装SFTP服务</title>
+    <link href="http://blog.terryding.com/p/7245841c.html"/>
+    <id>http://blog.terryding.com/p/7245841c.html</id>
+    <published>2019-02-15T06:17:47.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这个想法的起因是我需要给同事们共享 8 个 G 的会议视频，而我在公司里的 OwnCloud 账户容量不够，运维同学说运行 OwnCloud 的服务器磁盘不够了，也没配 LVM，不好增加容量。&lt;br&gt;原本准备用传统的 FTP 来上传和分享，但转头在使用 OwnCloud 的
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.terryding.com/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="docker" scheme="http://blog.terryding.com/tags/docker/"/>
+    
+      <category term="sftp" scheme="http://blog.terryding.com/tags/sftp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>拷贝个人命令行相关配置到服务器中</title>
+    <link href="http://blog.terryding.com/p/5e938be9.html"/>
+    <id>http://blog.terryding.com/p/5e938be9.html</id>
+    <published>2018-07-17T06:21:30.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如何快速的将我本地运行的环境转移到一台新安装的服务器环境呢？&lt;br&gt;可以省略一些代码补全插件，但是常用的一些显示优化，操作简化的插件还是需要可使用&lt;/p&gt;&lt;p&gt;&lt;strong&gt;打包并上传本地安装文件夹&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;由于我的仓库 &lt;a href=&quot;https
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.terryding.com/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="centos" scheme="http://blog.terryding.com/tags/centos/"/>
+    
+      <category term="vim" scheme="http://blog.terryding.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用gitlab的pages功能让百度收录github博客</title>
+    <link href="http://blog.terryding.com/p/5b944fdc.html"/>
+    <id>http://blog.terryding.com/p/5b944fdc.html</id>
+    <published>2017-04-18T03:22:04.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天给博客添加了 baidu 和 google 的校验文件，希望能让搜索引擎快速的收录博客的变更，但是操作中发现 baidu 的爬虫没办法爬去博客的 sitemap&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wx1.sinaimg.cn/large/9a1da786gy
+      
+    
+    </summary>
+    
+      <category term="SEO" scheme="http://blog.terryding.com/categories/SEO/"/>
+    
+    
+      <category term="seo" scheme="http://blog.terryding.com/tags/seo/"/>
+    
+      <category term="baidu" scheme="http://blog.terryding.com/tags/baidu/"/>
+    
+      <category term="gitlab" scheme="http://blog.terryding.com/tags/gitlab/"/>
+    
+      <category term="dns" scheme="http://blog.terryding.com/tags/dns/"/>
+    
+      <category term="travis-ci" scheme="http://blog.terryding.com/tags/travis-ci/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle数据库Sql的With As语句</title>
+    <link href="http://blog.terryding.com/p/53462dca.html"/>
+    <id>http://blog.terryding.com/p/53462dca.html</id>
+    <published>2017-04-17T18:23:56.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;今天碰到一道 sql 的题目，问题简化下来就是一张存有 id 和订单号的表格 orders，筛选出拥有最多订单的所有 id。
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://blog.terryding.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Oracle" scheme="http://blog.terryding.com/tags/Oracle/"/>
+    
+      <category term="sql" scheme="http://blog.terryding.com/tags/sql/"/>
+    
+      <category term="docker" scheme="http://blog.terryding.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 17.04下安装docker国内镜像教程</title>
+    <link href="http://blog.terryding.com/p/1a833b74.html"/>
+    <id>http://blog.terryding.com/p/1a833b74.html</id>
+    <published>2017-04-17T17:06:23.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前几天看到新闻说 ubuntu 以后要回归默认 gnome，于是就在虚拟机下安装了新版的 ubuntu-gnome17.04。顺手就总结下在纯净的 ubuntu 下安装 docker 的过程。&lt;/p&gt;&lt;h2 id=&quot;apt-源安装-docker&quot;&gt;&lt;a href=&quot;#apt
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.terryding.com/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="docker" scheme="http://blog.terryding.com/tags/docker/"/>
+    
+      <category term="ubuntu" scheme="http://blog.terryding.com/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则匹配一个数字(python实现)</title>
+    <link href="http://blog.terryding.com/p/2ee1faa1.html"/>
+    <id>http://blog.terryding.com/p/2ee1faa1.html</id>
+    <published>2017-04-14T23:09:02.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;给定一组字符串，判断该字符串是否为一个合法的数字，要求如下&lt;/p&gt;&lt;ol&gt;&lt;li&gt;基本整数数字是 0-9 的组合&lt;/li&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.terryding.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://blog.terryding.com/tags/python/"/>
+    
+      <category term="正则" scheme="http://blog.terryding.com/tags/%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大数快速幂(c++实现)</title>
+    <link href="http://blog.terryding.com/p/5121bb7.html"/>
+    <id>http://blog.terryding.com/p/5121bb7.html</id>
+    <published>2017-04-09T12:43:09.000Z</published>
+    <updated>2019-05-30T06:58:55.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;给定两个 int 范围的整数 m 和 n(m&amp;lt;10^9, n&amp;lt;10^5)，求出 m 的 n 次方的值，并使用 s
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.terryding.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="cpp" scheme="http://blog.terryding.com/tags/cpp/"/>
+    
+      <category term="大数运算" scheme="http://blog.terryding.com/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="快速幂" scheme="http://blog.terryding.com/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+  </entry>
+  
+</feed>
