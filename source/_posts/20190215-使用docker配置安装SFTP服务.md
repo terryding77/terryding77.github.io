@@ -141,13 +141,13 @@ docker stop sftpd | grep -v "No such container: sftpd"
 ## 使用 SFTP 客户端进行检验
 
 我这里常用的 FileZilla 客户端配置如下图
-![filezilla sftp config](https://ws2.sinaimg.cn/large/9a1da786gy1g0769epta6j20kd0jzta3.jpg)
+![filezilla sftp config](http://ws2.sinaimg.cn/large/9a1da786gy1g0769epta6j20kd0jzta3.jpg)
 
 同时，让运维同学开启了 OwnCloud 的 SFTP 外部存储服务，个人配置如下图
-![OwnCloud sftp config](https://ws2.sinaimg.cn/large/9a1da786gy1g076bkqnwsj21g2097wfd.jpg)
+![OwnCloud sftp config](http://ws2.sinaimg.cn/large/9a1da786gy1g076bkqnwsj21g2097wfd.jpg)
 
 最终一个运行中的服务目录结构如下图：
-![directory tree](https://wx4.sinaimg.cn/large/9a1da786gy1g076e7qhxpj20d10huwf7.jpg)
+![directory tree](http://wx4.sinaimg.cn/large/9a1da786gy1g076e7qhxpj20d10huwf7.jpg)
 每个用户可以在自己的 upload 文件夹下进行上传文件，而 share 文件夹内的内容所有用户都能下载（我在这放了一个 Readme 让所有用户可以看到简单的使用方法），但不能上传。
 
 这样我就可以使用 OwnCloud 里的分享等功能来进行视频的分享，同时也不需要运维同学担心磁盘的问题了（让他在另一台机器上部署了这个 SFTP 的 docker 服务）

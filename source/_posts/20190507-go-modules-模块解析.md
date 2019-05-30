@@ -151,13 +151,13 @@ import "domain.com/someother/sub/directory"
 ## 创建 Go Module 模块
 
 看完了理论，让我们用代码尝试一些操作。首先创建一个空目录，不要放在`$GOPATH`下。我现在使用`nummanip`目录来存放我的 Go 模块，这个目录下将存放一些包以及处理`number`这个数据结构。
-![新建仓库目录](https://wx1.sinaimg.cn/large/9a1da786gy1g2ttbk2w6aj212w0avju9.jpg)
+![新建仓库目录](http://wx1.sinaimg.cn/large/9a1da786gy1g2ttbk2w6aj212w0avju9.jpg)
 
 正如我们之前提到的`Go Modules`需要一个代码仓库，我们在 Github 上使用以下这个[URL](https://github.com/thatisuday/nummanip)创建一个 Git 代码仓库。
-![创建Github仓库](https://ws4.sinaimg.cn/large/9a1da786gy1g2ttdyab1vj212w0e3q6m.jpg)
+![创建Github仓库](http://ws4.sinaimg.cn/large/9a1da786gy1g2ttdyab1vj212w0e3q6m.jpg)
 
 接下来我们需要在该目录初始化`Go Modules`。使用`go mod init`命令来创建`go.mod`文件（类似 npm 的`package.json`文件），文件中会包含模块对应的引用路径和模块会使用的依赖包。我们也要初始化 Git 代码仓库，将目录与远端的 Github 仓库建立联系。
-![初始化Git和Go-Modules](https://ws4.sinaimg.cn/large/9a1da786gy1g2ttj9rddgj20m808hdhv.jpg)
+![初始化Git和Go-Modules](http://ws4.sinaimg.cn/large/9a1da786gy1g2ttj9rddgj20m808hdhv.jpg)
 
 ```shell
 mkdir nummanip && cd nummanip
@@ -169,7 +169,7 @@ go mod init github.com/thatisuday/nummanip
 > 注： 默认情况下在`$GOPATH`内创建模块是被禁止的，会返回`go: modules disabled inside GOPATH/src by GO111MODULE=auto; see 'go help modules'`的错误。这也是在为后期废弃`$GOPATH`做的预防措施。如果真的有这方面的需求，可以将`GO111MODULE`这个环境变量设为`on`。
 
 创建的`go.mod`文件包含模块引用路径和模块创建时 Go 的版本（译者：当前都为 Go 1.12，在 Go1.11 早期版本时`go init`命令不会写入 go 的版本信息）。前面这些复杂的准备工作完成后，我们就能开始我们编写模块内各个包的代码了。
-![模块包目录](https://wx1.sinaimg.cn/large/9a1da786gy1g2ttt71upbj20m80aadh4.jpg)
+![模块包目录](http://wx1.sinaimg.cn/large/9a1da786gy1g2ttt71upbj20m80aadh4.jpg)
 
 我们在模块内创建了两个包。现在它们还是空的目录，接下来我们放入一些代码。`calc`包将提供 number 之间的计算方法，而`transform`包则提供 numer 相关的数据结构类型转换的功能。
 
@@ -181,10 +181,10 @@ go mod init github.com/thatisuday/nummanip
 
 > Go 提供了`go test`工具帮助我们使用第三方测试组件来测试我们的代码，这和我们接下来的教程并不是同一个话题。
 
-![local-Modules本地模块](https://ws3.sinaimg.cn/large/9a1da786gy1g2tuapaz1fj20m80bm0tx.jpg)
+![local-Modules本地模块](http://ws3.sinaimg.cn/large/9a1da786gy1g2tuapaz1fj20m80bm0tx.jpg)
 
 我们为了测试使用`go mod init main`命令创建了`main`模块。为了方便，我们在 VSCode 工作区里同时打开了`main`和`nummanip`两个模块的目录。
-![vscode同时打开main和nummanip两个目录](https://ws2.sinaimg.cn/large/9a1da786gy1g2tucxr524j20m80bmdh8.jpg)
+![vscode同时打开main和nummanip两个目录](http://ws2.sinaimg.cn/large/9a1da786gy1g2tucxr524j20m80bmdh8.jpg)
 
 我们在`calc`包里编写了`math.go`文件来提供`Add`工具函数用于**返回两个数字之和**。注意包的申明部分，`package calc`标识了`math.go`这个文件属于`calc`包，而由于本包是在模块内独立的文件夹`calc`中的，所以**这段包名称的申明与模块名称是没有关系的**。
 
@@ -208,16 +208,16 @@ Git 提供了两种打标签的方法，**Lightweight Tag**这种是简单的指
 
 这是我们第一次发布此模块，我们需要创建一个提交并将其推送到远端。然后我们对刚刚的提交使用语义化版本号的形式打上标签。
 
-![提交代码](https://ws2.sinaimg.cn/large/9a1da786gy1g2tw4dxcguj20m80bmmzb.jpg)
+![提交代码](http://ws2.sinaimg.cn/large/9a1da786gy1g2tw4dxcguj20m80bmmzb.jpg)
 
 上图就是完成提交和推送的过程（译者：如读者跟随教程一起实验，请在 push 前执行`git add .` 和`git commit -m"xxx"`操作），`-f`参数强制推送这在第一次提交时是没问题的，接下来打标签。
 
-![打标签](https://ws1.sinaimg.cn/large/9a1da786gy1g2tw9xj2irj20m80bmdhr.jpg)
+![打标签](http://ws1.sinaimg.cn/large/9a1da786gy1g2tw9xj2irj20m80bmdhr.jpg)
 
 我们首次发布版本，可以用`v1.0.0`的语义化版本号。当我们发布`Go Modules`模块的时候，我们的语义化版本号标签名必须是以小写的**v**开头。在创建完 git 标签后，我们需要使用`git push --tags`命令推送到远端仓库。
-![GitHub provides information about tag inside the Releases section.](https://wx3.sinaimg.cn/large/9a1da786gy1g2twd7ofbtj20m8062gm5.jpg)
+![GitHub provides information about tag inside the Releases section.](http://wx3.sinaimg.cn/large/9a1da786gy1g2twd7ofbtj20m8062gm5.jpg)
 
-![运行main模块](https://wx1.sinaimg.cn/large/9a1da786gy1g2twdnw9xgj20m80do0uu.jpg)
+![运行main模块](http://wx1.sinaimg.cn/large/9a1da786gy1g2twdnw9xgj20m80do0uu.jpg)
 接下来我们在`main`模块内创建`app.go`文件来测试是否版本发布生效。我们从`github.com/thatisuday/nummanip`模块中引用`calc`包，并调用它的`Add`方法。由于我们既知道模块路径又知道包名，我们可以直接 import 引用包的完整 URL 路径。
 
 > 如果我们的包代码是直接写在模块目录下的，我们可以只 import 引用`github.com/thatisuday/nummanip`并使用`nummanip`作为包名去执行`nummanip.Add()`函数
@@ -226,7 +226,7 @@ Git 提供了两种打标签的方法，**Lightweight Tag**这种是简单的指
 
 > 这种方案能够帮助我们不需要告诉其他人需要安装什么什么依赖，Go 可以直接通过解析`go.mod`文件来处理模块所需的依赖。
 
-![模块依赖](https://wx2.sinaimg.cn/large/9a1da786gy1g2tx3sghbrj20m80agabh.jpg)
+![模块依赖](http://wx2.sinaimg.cn/large/9a1da786gy1g2tx3sghbrj20m80agabh.jpg)
 (译者：图中 nummanip 版本为 v1.0.1 应该为 v1.0.0，此图可能是作者后期补充，版本号由于后面的操作而被修改过)
 
 > 你可能会疑惑，Go 是如何解析 import 引用的 URL 的。例如`https://github.com/thatisuday/nummanip/calc`是会返回**404 Not Found**页面。关于这点，我也没能查到详细的文档，但是我猜测由于 Github 是 Go 可以识别的代码托管网站，Go 对其是有特殊的方案来定位包的位置，就像[这里](https://golang.org/cmd/go/#hdr-Remote_import_paths)所说的。
@@ -236,29 +236,29 @@ Git 提供了两种打标签的方法，**Lightweight Tag**这种是简单的指
 `Go Modules`被存入`$GOPATH/pkg/mod`目录下（module 缓存路径）。看起来我们好像还是没有摆脱`$GOPATH`的魔掌。但是 Go 确实需要找个公共的目录以保证不会将同一个包的同一个版本重复下载。
 
 而当我们执行`go run`命令或者`go test; go build`这样的 Go 命令时，Go 会自动的检查第三方 import 引用申明（类似我们这个模块里的引用），并且将依赖模块的代码仓库克隆到本地 module 缓存路径。
-![GOPATH-pkg-mod](https://wx4.sinaimg.cn/large/9a1da786gy1g2txpeu6yxj20m80a30vp.jpg)
+![GOPATH-pkg-mod](http://wx4.sinaimg.cn/large/9a1da786gy1g2txpeu6yxj20m80a30vp.jpg)
 
 我们可以看到模块缓存路径中有`nummanip`模块，且是标记为`v1.0.0`版本时的代码。Go 同时创建了`go.sum`文件来保存**直接或间接被本模块引用的依赖模块的内容**的 checksums（类似 commit hash，用来检测文件内容是否更改，一旦更改此计算值也会变化）。
 
-![go.sum file](https://ws3.sinaimg.cn/large/9a1da786gy1g2txwwwu1oj20m807hgmu.jpg)
+![go.sum file](http://ws3.sinaimg.cn/large/9a1da786gy1g2txwwwu1oj20m807hgmu.jpg)
 
 npm 的`package-lock.json`文件是一个锁定文件，为了 100%重现编译过程而存储引用的依赖版本信息，而`go.sum`文件并不是用于锁定版本的文件，它应当和我们的代码一起提交到代码仓库中（[详细解释](https://github.com/golang/go/wiki/Modules#is-gosum-a-lock-file-why-does-gosum-include-information-for-module-versions-i-am-no-longer-using)）。不过当其他人使用此模块时`go.sum`通过记录每个模块的 checksums 也能给 100%重现编译环境有很重要的帮助。（译者：这段主要看下详细解释，我并没有完全理解两个文件之间的区别，感觉是说 go.sum 并不强制而 package-lock.json 是强制的）
 
 ## 升级 patch 补丁版本号并使用
 
 接下来让我们添加些代码，为模块生成一个新的补丁版本。
-![patch-version-1.0.1](https://ws4.sinaimg.cn/large/9a1da786gy1g2tyli8va4j20m80fadj9.jpg)
+![patch-version-1.0.1](http://ws4.sinaimg.cn/large/9a1da786gy1g2tyli8va4j20m80fadj9.jpg)
 
 当我们修改`Add`函数的参数形式，通过[可变参数](https://medium.com/rungo/variadic-function-in-go-5d9b23f4c01a)的方案使其能够接受多个参数时，我们推送了一个新的标签`v1.0.1`。
 
 让我们在`main`模块中使用新的`Add`函数。由于 Go 之前已经下载了`nummanip`模块，所以`go run`命令不会主动获取新版本的依赖模块。为了使用新版，我们需要手动更新我们的依赖模块（在最坏的情况下可能会需要重新安装）
-![update go modules](https://ws3.sinaimg.cn/large/9a1da786gy1g2tysd8s91j20m80d8gnr.jpg)
+![update go modules](http://ws3.sinaimg.cn/large/9a1da786gy1g2tysd8s91j20m80d8gnr.jpg)
 
 为了更新当前已经存在于`go.mod`文件中的依赖模块，我们需要使用`go get -u`的命令。这条命令会更新所有的模块，将它们的次要版本或补丁版本提升到最新，但不会改变主要版本（后面将解释）。如果当新的次要版本出现后我们也只想更新 patch 补丁版本的话，可以使用`go get -u=patch`命令来实现。
 
 如果需要使用某个依赖模块的某个精确的版本，我们需要使用`go get module@version`命令。例如在我们的例子里为了安装`v1.0.1`版本，我们应当使用`go get github.com/thatisuday/nummanip/calc@v1.0.1`命令来实现。（译者：原文用 1.1.2，感觉 1.0.1 更合适且读者可以立刻尝试此命令）
 
-![Module cache after go get -u](https://ws4.sinaimg.cn/large/9a1da786gy1g2tz2rogppj20m80a3whf.jpg)
+![Module cache after go get -u](http://ws4.sinaimg.cn/large/9a1da786gy1g2tz2rogppj20m80a3whf.jpg)
 
 正如你所看见的，使用`go get -u`后 Go 下载了最新`v1.0.1`版本的模块并储存到缓存目录中。这样在公共基本的依赖管理方案就可以让系统里各种模块同时使用依赖模块不同的版本。
 
@@ -272,7 +272,7 @@ npm 的`package-lock.json`文件是一个锁定文件，为了 100%重现编译�
 
 那么这个**新的 import 引用路径**是什么样的呢？由于我们在`go.mod`文件中已经存在了之前我们引用的旧版本依赖模块的 URL 名称，我们需要修改一些东西来区分新旧版本。其实只需要简单的将 major 主版本号以（vX）的形式接到原本 import 引用路径后面，这样用户就能同时使用一个依赖模块的多个版本了。让我们实际操作下：
 
-![新的major主版本](https://wx1.sinaimg.cn/large/9a1da786gy1g2u3whmqa5j20m80dutb2.jpg)
+![新的major主版本](http://wx1.sinaimg.cn/large/9a1da786gy1g2u3whmqa5j20m80dutb2.jpg)
 
 上图可以看到，我们修改了`Add`函数的实现来检查是否传入至少两个参数，并在不符合的条件下返回 error 错误作为第一个返回值，而正常情况下则会返回无错误以及实际的数字之和作为第二个返回值。
 
@@ -282,18 +282,18 @@ npm 的`package-lock.json`文件是一个锁定文件，为了 100%重现编译�
 
 现在我们要更新`go.mod`文件，在模块申明的部分加入版本号的后缀。（译者：原文为 prefix，我觉得实际应该是想表达 suffix）
 
-![更新到v2分支](https://ws1.sinaimg.cn/large/9a1da786gy1g2u4bew5aqj20m80ecgp0.jpg)
+![更新到v2分支](http://ws1.sinaimg.cn/large/9a1da786gy1g2u4bew5aqj20m80ecgp0.jpg)
 
 虽然这里 import 引用路径有点让人迷惑，但是 Go 还是能够理解`vX`标记的含义，并正确的解析模块引用。`vX`是固定的，需要精确的对应 SemVer 语义化版本号的 major 主版本，例如**v2**就是对应`v2.x.x`的发布版本号。
 
-![安装v2版本依赖模块](https://ws1.sinaimg.cn/large/9a1da786gy1g2u4gzp0ftj20m80hh0vp.jpg)
+![安装v2版本依赖模块](http://ws1.sinaimg.cn/large/9a1da786gy1g2u4gzp0ftj20m80hh0vp.jpg)
 
 在上面的例子中，我们安装了`nummanip`模块的新 major 主版本。由于这是 major 主版本的更新，需要手动的使用`go get`在项目中安装。而新的模块也需要使用新的标记来 import 引用。
 
 需要给我们新版本模块里的包名另起一个别名是比较麻烦的事情。由于我们 import 引用了同一个包的两个不同版本，我们需要对其中一个 alias 起一个别名来解决包名变量重复的冲突。在这里，我们对`v2/calc`包起了`calcNew`的别名，并使用`calcNew.Add`来调用新版函数。
-![新的go mod文件](https://ws2.sinaimg.cn/large/9a1da786gy1g2u4on78xij20m807jt9s.jpg)
+![新的go mod文件](http://ws2.sinaimg.cn/large/9a1da786gy1g2u4on78xij20m807jt9s.jpg)
 
-![加入v2后的模块缓存状况](https://ws3.sinaimg.cn/large/9a1da786gy1g2u4p0wsbmj20m80a3408.jpg)
+![加入v2后的模块缓存状况](http://ws3.sinaimg.cn/large/9a1da786gy1g2u4p0wsbmj20m80a3408.jpg)
 
 你可以看到，`go get`命令写入了新版本的模块信息到`go.mod`文件中，并将新版本的模块下载到了模块缓存路径里。
 
@@ -308,7 +308,7 @@ npm 的`package-lock.json`文件是一个锁定文件，为了 100%重现编译�
 上文中我们使用了间接依赖模块这个名称，但并没有解释它。顾名思义，其实间接依赖模块就是在我们的模块中没有直接使用到的模块。直接依赖的模块是我们在代码中声明使用到的模块，而间接依赖模块，则是被直接依赖模块所依赖的模块。
 
 `go.mod`文件会记录下直接和间接依赖模块，并使用`//indirect`来标识间接使用模块，如下图：
-![直接和间接依赖模块](https://ws1.sinaimg.cn/large/9a1da786gy1g2u5lsa95tj20m80c9q52.jpg)
+![直接和间接依赖模块](http://ws1.sinaimg.cn/large/9a1da786gy1g2u5lsa95tj20m80c9q52.jpg)
 
 在上图中，我们知道`github.com/fatih/color`是一个直接依赖模块，因为我们在代码中 import 引用了它。当我们运行或编译该模块时，Go 会更新`go.mod`文件并且添加`indirect`注释到非直接引用的模块后面。
 
@@ -318,17 +318,17 @@ npm 的`package-lock.json`文件是一个锁定文件，为了 100%重现编译�
 
 说到了现在，我们可以 import 引用同一个依赖模块的不同版本，不过需要他们的 major 大版本号不同。当两个版本仅在 minor 次要版本和 patch 补丁版本号上有不同时我们却没有办法同时使用多个版本（因为在写 import 引用申明时，这些 minor 和 patch 版本号不同的模块并没有区别）。
 
-![依赖复制问题](https://wx1.sinaimg.cn/large/9a1da786gy1g2u5x7vdnwj20dl08xmx9.jpg)
+![依赖复制问题](http://wx1.sinaimg.cn/large/9a1da786gy1g2u5x7vdnwj20dl08xmx9.jpg)
 
 如上图，我们有一个模块依赖了**模块 A**和**模块 B**。这两个模块都同事依赖了同样的模块**模块 1**。但是问题出现了，**模块 A**依赖的是`v1.0.1`版本的**模块 1**，而**模块 B**依赖的是`v1.0.2`版本的**模块 1**。每个模块都定义了**minimal version**最小依赖版本以保证它们自身可以正常工作。所以如果我们使用`v1.0.1`版本的**模块 1**用于最后的编译，那么**模块 B**可能运行会有异常或者直接就无法进行编译。
 
 因此在编译中，我们只能用使用此依赖的一个版本，这是一个**Diamond Dependency Problem 钻石依赖问题**，如下图所示：
 
-![Diamond Dependency Problem钻石依赖问题](https://ws2.sinaimg.cn/large/9a1da786gy1g2u668cp9hj20dl08wglv.jpg)
+![Diamond Dependency Problem钻石依赖问题](http://ws2.sinaimg.cn/large/9a1da786gy1g2u668cp9hj20dl08wglv.jpg)
 
 正如 Go 所推荐的，同一个模块的多个版本，如果使用的是一个主版本号时，它应该是是能够向后兼容的。这样，当我们在使用`v1.0.2`版本用于编译运行时，它会能够包含`v1.0.1`版本的所有能力。Go 将这称为**Minimal Version Selection 最小版本选择**(其实也意味着在所有最小依赖版本号中选择最大的那个)。MVS 的详细解释在[这篇文章](https://research.swtch.com/vgo-mvs)中。
 
-![MVS最小版本选择](https://wx4.sinaimg.cn/large/9a1da786gy1g2u6ko7emrj20dl08w74j.jpg)
+![MVS最小版本选择](http://wx4.sinaimg.cn/large/9a1da786gy1g2u6ko7emrj20dl08w74j.jpg)
 
 所以最后我们应当选择`v1.0.2`版本的**模块 1**。
 

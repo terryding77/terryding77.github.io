@@ -50,7 +50,7 @@ from (select id, count(orderNumber) as counts
 where t1.counts = t2.max_counts;
 ```
 
-![mysql-screenshot](https://wx4.sinaimg.cn/large/9a1da786gy1g06xhybd5lj20wf0qdmzn.jpg)
+![mysql-screenshot](http://wx4.sinaimg.cn/large/9a1da786gy1g06xhybd5lj20wf0qdmzn.jpg)
 
 其中 t1 表完成 id 对应拥有订单总数的表格，t2 是 t1 中最大的订单数量，但写法上可以发现 t1 和 t2 的构造有很大一部分是冗余的，但我一时也无法找到合适的写法去除这个冗余。
 
@@ -60,11 +60,11 @@ where t1.counts = t2.max_counts;
 
 简单的搜索了 Oracle 数据的的安装教程，感觉好像很麻烦，而我又是只想简单使用，想着应该可以用 docker 来安装。
 
-![docker-search-oracal](https://wx3.sinaimg.cn/large/9a1da786gy1g06xhyfo0rj211x0i30xi.jpg)
+![docker-search-oracal](http://wx3.sinaimg.cn/large/9a1da786gy1g06xhyfo0rj211x0i30xi.jpg)
 
 看到了排名第一的 Oracle 镜像，转战 github 查看下[源码仓库](https://github.com/wnameless/docker-oracle-xe-11g)，其中包含了 dockerfile 和使用指南等，对我来说，如何运行 docker 镜像以及登录 Oracle 命令行是我想知道的，稍微阅读下使用指南，知道了镜像对应的端口以及 Oracle 数据库的默认用户名密码，开始运行镜像并登录：
 
-![docker-oracle-11g-usage](https://ws1.sinaimg.cn/large/9a1da786gy1g06xhyl2f4j20r00s8dke.jpg)
+![docker-oracle-11g-usage](http://ws1.sinaimg.cn/large/9a1da786gy1g06xhyl2f4j20r00s8dke.jpg)
 
 # Oracle 数据库 with as 写法
 
@@ -79,7 +79,7 @@ select t1.id
     where t1.counts = t2.max_counts;
 ```
 
-![oracle-screenshot](https://ws4.sinaimg.cn/large/9a1da786gy1g06xhy7ewxj20rs0n7jt6.jpg)
+![oracle-screenshot](http://ws4.sinaimg.cn/large/9a1da786gy1g06xhy7ewxj20rs0n7jt6.jpg)
 
 with as 的写法可以并列多条，后面的可以使用前面已经定义好的表，如 t2 的定义就使用了 t1 表。
 

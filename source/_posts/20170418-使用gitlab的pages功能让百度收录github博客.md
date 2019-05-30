@@ -65,19 +65,19 @@ pages:
 
 ## 最后访问[http://yourname.gitlab.io](http://terryding77.gitlab.io/)
 
-![visit-oschina-pages](https://ws4.sinaimg.cn/large/9a1da786gy1g06wrxz2pgj20cc02xq2u.jpg)
+![visit-oschina-pages](http://ws4.sinaimg.cn/large/9a1da786gy1g06wrxz2pgj20cc02xq2u.jpg)
 
 这时 gitlab 的 pages 服务就配置完成了，以后在博客变动后向对 github 提交一样，使用 git 向 gitlab 提交你的修改就行
 
 ## 自定义域名
 
 可能我们有自己的域名想绑定到 gitlab pages，这时可以在项目的 pages 选项里进行添加，选择 settings-pages-new domain，输入你自己的域名(https 请提供相关文件)，然后就能看到提示你可以使用该域名访问了。
-![gitlab-page-custom-website](https://wx3.sinaimg.cn/large/9a1da786gy1g06wrzthh0j21cf0esq44.jpg)
+![gitlab-page-custom-website](http://wx3.sinaimg.cn/large/9a1da786gy1g06wrzthh0j21cf0esq44.jpg)
 
 # 给百度爬虫专用 dns
 
 我的域名是使用阿里云的域名解析，在这里我需要在原本 github.io 的解析之外添加一条百度专线的 cname
-![aliyun-dns-for-baidu](https://wx1.sinaimg.cn/large/9a1da786gy1g06ws0omtqj218i06xq3v.jpg)
+![aliyun-dns-for-baidu](http://wx1.sinaimg.cn/large/9a1da786gy1g06ws0omtqj218i06xq3v.jpg)
 如果你觉得 gitlab 的解析更方便，你可以将 gitlab 的解析线路改为默认，github 的解析线路改成海外。
 
 # 自动化 gitlab page 的部署
@@ -95,19 +95,19 @@ pages:
 ## 申请 gitlab 的 access token
 
 在 gitlab 的个人设置页面找到 access token 并如下填写各项内容，然后会生成一个 token 字符串，复制它备用。
-![gitlab-access-token](https://wx3.sinaimg.cn/large/9a1da786gy1g06ws0cmiwj21180g4dgz.jpg)
+![gitlab-access-token](http://wx3.sinaimg.cn/large/9a1da786gy1g06ws0cmiwj21180g4dgz.jpg)
 
 ## 将 gitlab 的 access token 加入 travis-ci 的环境变量
 
 登陆[travis-ci.org](https://travis-ci.org)并在项目设置中添加 gitlab token 的环境变量
-![travis-ci-add-gitlab-token](https://ws1.sinaimg.cn/large/9a1da786gy1g06wryk0g8j215v0983z2.jpg)
+![travis-ci-add-gitlab-token](http://ws1.sinaimg.cn/large/9a1da786gy1g06wryk0g8j215v0983z2.jpg)
 
 ## 取消 gitlab 的 master 分支 force push 保护
 
 由于我们要在 ci 中强制把生成的站点文件 push 到 gitlab，需要将 gitlab 对应的 master 分支解除保护
 
 选择项目的 settings-repository 下的 protected branchs 将 master 从中删除
-![gitlab-unprotect-branch](https://wx2.sinaimg.cn/large/9a1da786gy1g06wrzjdhwj21f50m9gox.jpg)
+![gitlab-unprotect-branch](http://wx2.sinaimg.cn/large/9a1da786gy1g06wrzjdhwj21f50m9gox.jpg)
 
 ## 添加.gitlab-ci.yml 并修改.travis-ci.yml 文件
 
