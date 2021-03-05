@@ -7,3 +7,4 @@ public/
 .deploy*/
 .encrypted_secret_key
 
+package-lock.json
